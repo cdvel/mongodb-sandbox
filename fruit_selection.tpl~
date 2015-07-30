@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-	<head>
-		<title>Hello there </title>
-	</head>
-	<body>
-		<p> Thank you! You've selected {{fruit}} </p>
-	</body>
-</html>

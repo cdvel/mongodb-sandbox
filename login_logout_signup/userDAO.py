@@ -53,19 +53,10 @@ class UserDAO:
 
         user = None
         try:
-<<<<<<< HEAD
 		from pymongo import MongoClient
 		connection = MongoClient('localhost', 27017)
 		db = connection.blog
 		user = db.users.find_one({'_id': username})			
-            # XXX HW 2.3 Students Work Here
-            # you will need to retrieve right document from the users collection.
-#            print "This space intentionally left blank."
-=======
-            # XXX HW 2.3 Students Work Here
-            # you will need to retrieve right document from the users collection.
-            print "This space intentionally left blank."
->>>>>>> 526d397a257d9421c4c5fba3f24045aa7250ae7a
         except:
             print "Unable to query database for user"
 
@@ -95,15 +86,10 @@ class UserDAO:
             # XXX HW 2.3 Students work here
             # You need to insert the user into the users collection.
             # Don't over think this one, it's a straight forward insert.
-<<<<<<< HEAD
 		from pymongo import MongoClient
                 connection = MongoClient('localhost', 27017)
                 db = connection.blog
                 db.users.insert(user)
-=======
-
-            print "This space intentionally left blank."
->>>>>>> 526d397a257d9421c4c5fba3f24045aa7250ae7a
 
         except pymongo.errors.OperationFailure:
             print "oops, mongo error"
