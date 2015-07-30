@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MongoDB University</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Free Online Classes on MongoDB from MongoDB, Inc."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="path_prefix" content=""/>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.7d83e8e6c089.ico"/>
+    <!-- Bootstrap CSS -->
+    <link href="/static/css/bootstrap.61f6500bca08.css" rel="stylesheet" media="screen" id="bootstrapcss">
+    <!-- Other CSS -->
+    <link href="/static/css/main.807e5c67a84c.css" rel="stylesheet" media="screen" id="maincss">
+    <link href="/static/css/style.e5ef8b9488cc.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Import Font -->
+    <script type="text/javascript" src="//use.typekit.net/vsq6ptv.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <!-- BEGIN MAIN_VENDOR -->
+    
+    <script type="text/javascript" src="/static/js/lms-main_vendor.3ac6a7f5a7e6.js" charset="utf-8"></script>
+
+
+    <!-- END MAIN_VENDOR -->
+
+    
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-58NXVC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-58NXVC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script src="/static/js/sticky_footer.33d0e18eda40.js"></script>
+  </head>
+
+  <body class="">
+
+    
+    
+
+
+
+
+
+
+
+
+<!--START HEADER SECTION-->
+<header id="hover-nav" class="page-header container" role="banner">
+  <div class="row">
+    <div class="col-sm-2">
+      <a href="/"><img src="/static/images/mongodb-university-logo_new.baaa6b1901eb.png" alt="MongoDB University" /></a>
+    </div><!--end left col -->
+    <div id="menu-move" class="col-sm-10">
+      <nav id="hover-navbar">
+        <ul>
+          
+
+          <li class="dropdown">
+            <a href="/exams">Professional Certification</a>
+            <ul class="dropdown-menu">
+              <li><a href="/exams/C100DEV/about">Developer Exam</a></li>
+              <li><a href="/exams/C100DBA/about">DBA Exam</a></li>
+              <li><a href="/exams">Why Certification?</a></li>
+              <li><a href="/exams#materials">Preparation Materials</a></li>
+              <li><a href="/exams/verify_certificate">Verify a Certification</a></li>
+              <li><a href="/exams/study">Study Sessions</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+
+            <a href="/courses">Online Courses</a>
+            <ul class="dropdown-menu">
+              <li><a href="/courses/catalog">Online Course Catalog</a></li>
+              <li><a href="/courses/schedule">Online Course Schedule</a></li>
+              <li><a href="/about/how-mongodb-university-online-courses-are-produced">How Courses Are Produced</a></li>
+            </ul>
+
+          </li>
+          <li class="dropdown">
+            <a href="/training">Public Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="/training#why">Why Public Training?</a></li>
+              <li><a href="/training#schedule">Public Training Schedule</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/private_training">Private Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="/private_training#why">Why Private Training?</a></li>
+              <li><a href="/private_training#products">Private Training Products</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a id="login-button" data-toggle="modal" data-target="#login-modal" class="btn btn-action navbar-btn">Sign In</a>
+          </li>
+        </ul>
+ 
+        </ul>
+      </nav>
+   </div>
+  </div>
+</header>
+<!-- END HEADER CONTAINER -->
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="login-modal" class="modal login-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	<h2 class="modal-title text-center">Sign In</h2>
+      </div>
+      <div class="modal-body">
+	<form id="login_form" class="login_form" method="post" data-remote="true" action="/login">
+	  
+<input type="hidden" name="csrfmiddlewaretoken" value="vP32yudlARDFSUom90shxhzYuQOeuDL9" />
+
+	  <div class="form-group">
+            <label>Email</label>
+            <input name="email" type="email" placeholder="Email" class="form-control"/>
+	  </div>
+	  <div class="form-group">
+            <label>Password</label>
+            <input name="password" type="password" placeholder="Password" class="form-control"/>
+	    <p class="help-block"><a href="" data-dismiss="modal" data-toggle="modal" data-target="#forgot-password-modal">Forgot password?</a></p>
+	  </div>
+	  <div class="checkbox">
+	    <label class="remember-me">
+              <input name="remember" type="checkbox" value="true">
+              Remember me
+	    </label>
+	  </div>
+          <input name="submit" type="submit" value="Access My Courses" class="btn btn-action btn-block"/>
+	</form>
+      </div>
+      <div class="modal-footer">
+	<p class="text-center">
+          <strong>No account yet?</strong>
+	  <a href="
+
+/signup?next=%2Fcourses%2F10gen%2FM101P%2F2015_May%2Fcourseware%2FFinal_Exam%2F52b88f2ce2d42307189eef36%2F
+">Sign up.</a>
+	</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  (function() {
+   $(document).delegate('#login_form', 'ajax:success', function(data, json, xhr) {
+     if (json.success) {
+        next = getParameterByName('next');
+        if (next) {
+           location.href = next;
+        } else {
+	   location.reload();
+        }
+     } else {
+       if ($('#login_error').length == 0) {
+         $('#login_form').prepend('<div id="login_error" class="alert alert-danger"></div>');
+       }
+       $('#login_error').html(json.value);
+     }
+   });
+})(this)
+</script>
+
+
+
+
+
+
+<section id="forgot-password-modal" class="modal forgot-password-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h2 class="modal-title text-center">Password reset</h2>
+      </div>
+      <div class="modal-body">
+        <div id="alert-forgot-password" class="alert alert-info" style="display:none">We&rsquo;ve e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly.</div>
+	<form id="form-forgot-password" action="/password_reset/" method="post" data-remote="true">
+	  
+<input type="hidden" name="csrfmiddlewaretoken" value="vP32yudlARDFSUom90shxhzYuQOeuDL9" />
+
+          <div class="form-group">
+            <p class="help-block">Enter your address below, and we&rsquo;ll email you instructions for setting a new password.</p>
+            <label class="control-label">Email</label>
+            <input id="id_email" type="email" name="email" maxlength="75" placeholder="Your E-mail" class="form-control" />
+          </div>
+          <div class="form-group">
+            <input type="submit" id="pwd_reset_button" class="btn btn-action btn-block" value="Reset my password" />
+          </div>
+	</form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+    $(document).delegate("#form-forgot-password", "ajax:success", function(data, json, xhr) {
+	if (json.success) {
+	    $("#alert-forgot-password").removeClass("alert-danger").addClass("alert-info").html(json.value).show();
+	} else {
+	    $("#alert-forgot-password").removeClass("alert-info").addClass("alert-danger").html("Email is incorrect.").show();
+	}
+    });
+})(this);
+</script>
+
+
+<!-- clickable nav -->
+<div id="click-nav" class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><img src="/static/images/mongodb-university-logo_new.baaa6b1901eb.png" alt="MongoDB University" /></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div><!--end left col -->
+    <div class="navbar-collapse collapse click-navbar">
+      <ul class="nav navbar-nav">
+        
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Professional Certification</a>
+            <ul class="dropdown-menu">
+              <li><a href="/exams/C100DEV/about">Developer Exam</a></li>
+              <li><a href="/exams/C100DBA/about">DBA Exam</a></li>
+              <li><a href="/exams">Why Certification?</a></li>
+              <li><a href="/exams#materials">Preparation Materials</a></li>
+              <li><a href="/exams/verify_certificate">Verify a Certification</a></li>
+              <li><a href="/exams/study">Study Sessions</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Online Courses</a>
+            <ul class="dropdown-menu">
+              <li><a href="/courses">What are Online Courses?</a></li>
+              <li><a href="/courses/catalog">Online Course Catalog</a></li>
+              <li><a href="/courses/schedule">Online Course Schedule</a></li>
+              <li><a href="/about/how-mongodb-university-online-courses-are-produced">How Courses Are Produced</a></li>
+            </ul>
+
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Public Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="/training">Why Public Training?</a></li>
+              <li><a href="/training#schedule">Public Training Schedule</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Private Training</a>
+            <ul class="dropdown-menu">
+              <li><a href="/private_training">Why Private Training?</a></li>
+              <li><a href="/private_training#products">Private Training Products</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a id="login-button" data-toggle="modal" data-target="#login-modal" class="btn btn-action navbar-btn">Sign In</a>
+          </li>
+        </ul>
+
+      </ul>
+    </div><!-- navbar-collapse -->
+  </div><!-- container-fluid -->
+</div>
+
+    
+
+    
+<section class="hero-container white-bg vert-push-6">
+  <div class="hero hero-opaque" style="background-image:url('/static/images/heroes/certification.5996738c9735.png')"></div>
+  <div class="h1-wrapper">
+    <div class="homehero-content">
+      
+
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+      <h1 class="white">
+        Become a MongoDB<br>
+        Certified Professional.
+      </h1>
+      <p class="white" style=" font-size: 1.4em; ">Exam session running July 21 - 28</p>
+      <a class="btn btn-action" href="/exams#schedule">Register Now »</a>
+      
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--START MAIN CONTENT SECTION-->
+<div id="main" class="container" role="main">
+    <div class="row">
+        <div class="col-md-12">
+
+            <section class="vert-push-6"><!-- online courses section -->
+                <!-- reduced space below the h1 to bring courses up higher, hopefully above the fold -->
+                <h1 class="mainhead" style=" margin-bottom: 0.3em; ">Online Courses</h1>
+                <!-- Example row of columns -->
+                <div class="row courseboxes vert-offset-2">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-sm-4 coursebox" id="course-m101p">
+                                <a href="/courses/M101P/about"><img src="/static/images/thumbnails/M101P.2f126b92bda4.jpg"><br/>
+                                <p><a href="/courses/M101P/about">M101P: MongoDB for Developers</a></p>
+                            </div>
+                            <div class="col-sm-4 coursebox" id="course-m101js">
+                                <a href="/courses/M101JS/about"><img src="/static/images/thumbnails/M101JS.6630a7d647d1.jpg"><br/>
+                                <p><a href="/courses/M101JS/about">M101JS: MongoDB for Node.js Developers</a></p>
+                            </div>
+                            <div class="col-sm-4 coursebox" id="course-m101n">
+                                <a href="/courses/M101N/about"><img src="/static/images/thumbnails/M101N.f0bfdf295414.jpg"><br/>
+                                <p><a href="/courses/M101N/about">M101N: MongoDB for .NET Developers</a></p>
+                            </div><!-- end inner row -->
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-sm-4 coursebox" id="course-m101j">
+                                <a href="/courses/M101J/about"><img src="/static/images/thumbnails/M101J.0db97631e3d9.jpg"/></a>
+                                <p><a href="/courses/M101J/about">M101J: MongoDB for Java Developers</a></p>
+                            </div>
+                            <div class="col-sm-4 coursebox" id="course-m102">
+                                <a href="/courses/M102/about"><img src="/static/images/thumbnails/M102.d1251b225638.jpg"><br/>
+                                <p><a href="/courses/M102/about">M102: MongoDB for DBAs</a></p>
+                            </div>
+                            <div class="col-sm-4 coursebox" id="course-m202">
+                                <a href="/courses/M202/about"><img src="/static/images/thumbnails/M202.53bb52d9bdb8.jpg"><br/>
+                                <p><a href="/courses/M202/about">M202: MongoDB Advanced Deployments and Operations</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-sm-offset-4 col-sm-4 coursebox" id="course-ud032">
+                                <a href="https://www.udacity.com/course/ud032"><img src="/static/images/thumbnails/UD032.2487bc786de0.jpg"><br/>
+                                <p><a href="https://www.udacity.com/course/ud032">UD032: Data Wrangling with MongoDB (Udacity)</a></p>
+                            </div>
+                        </div><!-- end inner row -->
+                    </div>
+                </div><!-- end outer row -->
+
+            </section><!--detail for Online Courses-->
+
+            <!--grey line-->
+            <div><p><hr></p></div>
+            <!--end grey line-->
+
+            <!--Public Training--> 
+            <section class="vert-offset-6 vert-push-6">
+                
+
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <h1 class="mainhead">Public Training</h1>
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+                
+
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <p>Accelerate your learning with in-person training taught by MongoDB engineers. These immersive classes offer hands-on experience with MongoDB use cases based on years of field experience.
+                Developer and DBA classes offered around the globe. We offer 2-day and 3-day classes.
+                </p>
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+                <p><a class="btn btn-action" href="/training#schedule">Find Classes Near You &raquo;</a></p>
+            </section><!--end In Person Training section--> 
+
+            <!--grey line-->
+            <div><p><hr></p></div>
+            <!--end grey line-->
+
+            <!-- Private Training -->
+            <section class="vert-offset-6 vert-push-6">
+                
+
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <h1 class="mainhead">Private Training</h1>
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+                
+
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <p>Train team members all at once with customized classes designed to address the needs of your MongoDB application and deployment.</p>
+                <p></p>
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+                <p><a class="btn btn-action" href="/private_training">Learn More &raquo;</a></p>
+            </section><!-- end Private Training section -->
+
+            <!--grey line-->
+            <div><p><hr></p></div>
+            <!--end grey line-->
+
+            <!--Professional Certification-->
+            <section class="vert-offset-6 vert-push-6">
+                <div class="row">
+                    
+
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                    <h1 class="mainhead">Professional Certification</h1>
+                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+                    <div class="col-md-6">
+                        <img class="img-rounded" src="/static/images/profcert.6107d6c1c499.png">
+                    </div><!--end col 8-->
+                    <div class="col-md-6">
+                    
+
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                        <p>Gain more visibility among hiring managers and recruiters looking to fill roles requiring one of the most popular technologies today. Following our classes, take the next step and get certified. </p>
+                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+                        <p><a class="btn btn-action" href="/exams#schedule" role="button">Sign Up for the Next Exam &raquo;</a></p>
+                    </div><!--end col 6-->
+                </div><!--end row-->
+            </section><!-- Professional Certification end -->
+        </div><!-- end col-md-12 -->
+    </div><!--end row-->
+</div><!-- END MAIN CONTENT CONTAINER -->
+
+
+
+
+    
+
+    
+    
+
+
+
+<!--START FOOTER SECTION-->
+<footer id="footer" class="container vert-offset-6">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="footer-nav" class="pull-left">
+        <ul class="list-inline">
+          <li>Copyright © 2015 MongoDB, Inc.</li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/help">Help</a></li>
+          <li><a href="http://www.mongodb.com/legal/legal-notices"> Legal Notices</a></li>
+        </ul>
+      </div>
+      <div class="social pull-right"> 
+        <a href="https://twitter.com/mongodbinc"><img src="/static/images/twitter.205e991f5622.png"></a> 
+        <a href="http://www.youtube.com/user/MongoDB"><img src="/static/images/youtube.e76cdf736116.png"></a> 
+        <a href="https://www.facebook.com/mongodb"><img src="/static/images/facebook.7bad9b890793.png"></a> 
+        <a href="https://plus.google.com/u/1/101024085748034940765/posts?cfem=1"><img src="/static/images/google-plus.3a4767b904a4.png"></a> 
+        <a href="http://www.linkedin.com/groups?gid=2340731&amp;trk=vsrp_groups_res_name&amp;trkInfo=VSRPsearchId%3A59383871372789714033%2CVSRPtargetId%3A2340731%2CVSRPcmpt%3Aprimary"><img src="/static/images/linkedin.aa16dd424e51.png"></a> 
+	<a href="http://openedx.org"><img src="//files.edx.org/openedx-logos/edx-openedx-logo-tag-dark.png" height="32" alt="Powered by Open edX" /></a>
+      </div><!--end social -->
+    </div><!--end right col -->
+  </div> <!--end footer row -->
+</footer>
+<!-- END FOOTER CONTAINER -->
+
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/static/js/lms-application.02f0ca828125.js" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="/static/js/lms-modules.a0979c5284fe.js" charset="utf-8"></script>
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="/static/js/bootstrap.c1eff7b72ea8.js"></script>
+    
+<script>
+  $(window).load(function() {
+      if (getParameterByName('next')) {
+	 $('#login-button').trigger("click");
+      }
+  })
+</script>
+
+    
+
+    <span id="bizible-settings" data-attach-secure-forms="true" style="display: none;"></span>
+    <script async src="//cdn.bizible.com/_biz-a.js"></script>
+  </body>
+</html>

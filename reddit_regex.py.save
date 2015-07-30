@@ -1,0 +1,18 @@
+import pymongo
+connection = pymongo.MongoClient("mongodb://localhost")
+db=connection.reddit
+stories = db.stories
+
+find();
+
+def find():
+	print "find, stories for apple and google"
+	q = {'title':{'$regex': 'apple|google', '$options': 'i'}}
+	p = {'title':1, '_id': 0}
+	try
+		cursor = stories.find(q, p)
+	except Exception as e:
+		print "Unexpected error: ", type(e), e
+	for doc in cursor
+	print doc
+

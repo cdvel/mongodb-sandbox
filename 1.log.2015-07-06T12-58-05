@@ -1,0 +1,31 @@
+2015-07-06T12:47:19.502+0000 [initandlisten] MongoDB starting : pid=28989 port=27017 dbpath=/data/rs1 32-bit host=tequendama
+2015-07-06T12:47:19.502+0000 [initandlisten] 
+2015-07-06T12:47:19.503+0000 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+2015-07-06T12:47:19.503+0000 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+2015-07-06T12:47:19.503+0000 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+2015-07-06T12:47:19.503+0000 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+2015-07-06T12:47:19.505+0000 [initandlisten] 
+2015-07-06T12:47:19.505+0000 [initandlisten] db version v2.6.10
+2015-07-06T12:47:19.505+0000 [initandlisten] git version: 5901dbfb49d16eaef6f2c2c50fba534d23ac7f6c
+2015-07-06T12:47:19.505+0000 [initandlisten] build info: Linux ip-10-16-142-20 2.6.18-194.el5xen #1 SMP Tue Mar 16 22:08:06 EDT 2010 i686 BOOST_LIB_VERSION=1_49
+2015-07-06T12:47:19.505+0000 [initandlisten] allocator: system
+2015-07-06T12:47:19.506+0000 [initandlisten] options: { net: { port: 27017 }, processManagement: { fork: true }, replication: { oplogSizeMB: 64, replSet: "m101" }, storage: { dbPath: "/data/rs1", smallFiles: true }, systemLog: { destination: "file", path: "1.log" } }
+2015-07-06T12:47:19.534+0000 [initandlisten] ERROR: listen(): bind() failed errno:98 Address already in use for socket: 0.0.0.0:27017
+2015-07-06T12:47:19.534+0000 [initandlisten] ERROR:   addr already in use
+2015-07-06T12:47:19.540+0000 [initandlisten] allocating new ns file /data/rs1/local.ns, filling with zeroes...
+2015-07-06T12:47:20.116+0000 [FileAllocator] allocating new datafile /data/rs1/local.0, filling with zeroes...
+2015-07-06T12:47:20.116+0000 [FileAllocator] creating directory /data/rs1/_tmp
+2015-07-06T12:47:20.118+0000 [FileAllocator] done allocating datafile /data/rs1/local.0, size: 16MB,  took 0 secs
+2015-07-06T12:47:20.124+0000 [initandlisten] build index on: local.startup_log properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }
+2015-07-06T12:47:20.125+0000 [initandlisten] 	 added index to empty collection
+2015-07-06T12:47:20.126+0000 [initandlisten] command local.$cmd command: create { create: "startup_log", size: 10485760, capped: true } ntoreturn:1 keyUpdates:0 numYields:0  reslen:37 587ms
+2015-07-06T12:47:20.131+0000 [initandlisten] now exiting
+2015-07-06T12:47:20.131+0000 [initandlisten] dbexit: 
+2015-07-06T12:47:20.131+0000 [initandlisten] shutdown: going to close listening sockets...
+2015-07-06T12:47:20.131+0000 [initandlisten] shutdown: going to flush diaglog...
+2015-07-06T12:47:20.131+0000 [initandlisten] shutdown: going to close sockets...
+2015-07-06T12:47:20.131+0000 [initandlisten] shutdown: waiting for fs preallocator...
+2015-07-06T12:47:20.131+0000 [initandlisten] shutdown: closing all files...
+2015-07-06T12:47:20.132+0000 [initandlisten] closeAllFiles() finished
+2015-07-06T12:47:20.132+0000 [initandlisten] shutdown: removing fs lock...
+2015-07-06T12:47:20.132+0000 [initandlisten] dbexit: really exiting now
