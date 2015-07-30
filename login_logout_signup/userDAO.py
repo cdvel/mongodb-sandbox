@@ -94,8 +94,6 @@ class UserDAO:
                 db = connection.blog
                 db.users.insert(user)
 
- #           print "This space intentionally left blank."
-
         except pymongo.errors.OperationFailure:
             print "oops, mongo error"
             return False
